@@ -23,7 +23,7 @@ The default project reference is `kzlzrdqsotbttfsiumbc`. Override with `VITE_SUP
 
 ## Database
 
-The existing Supabase project already contains the initial 17 tables. Run `supabase/schema.sql` on that project **once** after reviewing the existing database. It adds RLS policies, secure RPC submissions/marking, and moves answer keys to a protected table. If a partial migration is present, reconcile migrations before retrying. Schema includes SQL `SECURITY DEFINER` helpers under unexposed `app_private` schema.
+The existing Supabase project already contains the initial 17 tables. The applied, version-controlled migrations are committed under `supabase/migrations/`. These are already deployed to the dedicated Supabase project; do not reapply them to that project. It adds RLS policies, secure RPC submissions/marking, and moves answer keys to a protected table. If a partial migration is present, reconcile migrations before retrying. Schema includes SQL `SECURITY DEFINER` helpers under unexposed `app_private` schema.
 
 ## Initial school administrator
 
