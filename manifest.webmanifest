@@ -1,0 +1,19 @@
+{
+  "name": "Torch Bearers Academy",
+  "short_name": "Torch Bearers",
+  "description": "Torch Bearers Academy school management portal",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#faf7fa",
+  "theme_color": "#352137",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
