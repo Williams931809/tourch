@@ -4,8 +4,8 @@ const pdfWorker = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/build/pdf.wor
 
 pdfjsLib.GlobalWorkerOptions.workerSrc=pdfWorker;
 
-const URL=import.meta.env.VITE_SUPABASE_URL||'https://kzlzrdqsotbttfsiumbc.supabase.co';
-const KEY=import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY||'sb_publishable__KovwYij-NrYlvBTUFCwUg_xE5PzVal';
+const URL=import.meta.env?.VITE_SUPABASE_URL||'https://kzlzrdqsotbttfsiumbc.supabase.co';
+const KEY=import.meta.env?.VITE_SUPABASE_PUBLISHABLE_KEY||'sb_publishable__KovwYij-NrYlvBTUFCwUg_xE5PzVal';
 const db=createClient(URL,KEY,{auth:{persistSession:true,autoRefreshToken:true}});
 const root=document.querySelector('#app');
 let user=null,profile=null,tab='Overview',activeVersion=0,localTimer=null;
