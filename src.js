@@ -1,7 +1,7 @@
-import {createClient} from '@supabase/supabase-js';
-import * as pdfjsLib from 'pdfjs-dist/build/pdf.mjs';
-import pdfWorker from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
-import './style.css';
+import {createClient} from 'https://esm.sh/@supabase/supabase-js@2.49.8';
+import * as pdfjsLib from 'https://esm.sh/pdfjs-dist@4.10.38/build/pdf.mjs';
+const pdfWorker = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/build/pdf.worker.min.mjs';
+
 pdfjsLib.GlobalWorkerOptions.workerSrc=pdfWorker;
 
 const URL=import.meta.env.VITE_SUPABASE_URL||'https://kzlzrdqsotbttfsiumbc.supabase.co';
