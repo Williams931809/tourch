@@ -4,3 +4,73 @@
 .login-art .academy-logo{width:83px;height:83px;background:#fff;box-shadow:0 10px 26px #130b1424}
 .brand-name{line-height:1.16}.login-art .brand-name{font-size:20px}
 @media(max-width:760px){.academy-logo{width:48px;height:48px}}
+
+/* Mobile app shell: native-inspired navigation, no squeezed desktop columns */
+.mobile-app-header,.mobile-bottom-nav,.mobile-nav-sheet{display:none}
+@media(max-width:760px){
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+body{background:#faf7fa}
+.shell{display:block;min-height:100dvh;overflow-x:clip}
+.shell>aside{display:none}
+.mobile-app-header{display:flex;position:sticky;top:0;z-index:40;align-items:center;justify-content:space-between;gap:12px;height:69px;padding:8px 17px;background:#352137;color:white;box-shadow:0 3px 12px #2a17351b}
+.mobile-brand{display:flex;align-items:center;gap:10px;min-width:0}
+.mobile-brand img{width:42px;height:42px;flex:none;object-fit:contain;border-radius:12px;background:white;padding:3px}
+.mobile-brand strong{display:block;font:700 16px Outfit,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mobile-brand span{font-size:9px;letter-spacing:.08em;color:#f0c6df;display:block;margin-top:3px}
+.mobile-menu-button{border:0;background:#ffffff20;color:white;width:41px;height:41px;border-radius:13px;font-size:21px;flex:none}
+.shell main{width:100%;min-width:0;max-width:100%;padding:18px 15px calc(92px + env(safe-area-inset-bottom,0px));margin:0}
+.topbar{display:block;padding:0 0 14px;margin-bottom:15px;border:0;min-width:0}
+.topbar>div:first-child{min-width:0}
+.topbar .eyebrow{letter-spacing:.09em;font-size:10px;line-height:1.4}
+.topbar h1{font-size:27px;line-height:1.15;margin:5px 0}
+.topbar .page-sub{font-size:12px;margin:3px 0;color:#887886;line-height:1.45}
+.top-actions{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:12px;min-width:0;width:100%}
+.top-actions .avatar{display:none}
+.top-actions .btn{border-radius:30px;max-width:100%;padding:8px 12px;font-size:11px;min-height:35px;white-space:normal;text-align:center}
+.top-actions #modeToggle{order:1;flex:1 1 165px;background:#f7e8f0;border-color:#ebc7dd;color:#85345d}
+.top-actions #demoRoleSelect{order:2;flex:1 1 122px;min-width:0!important;max-width:100%;font-size:12px;border-radius:12px;border:1px solid #e5d8e1;padding:8px 9px;background:white}
+.top-actions #logout{order:3;flex:0 0 auto;padding:7px 11px}
+#page{width:100%;min-width:0}
+#page>*{max-width:100%}
+.hero{display:block!important;width:100%;min-width:0;overflow:hidden;padding:23px 20px;border-radius:22px;margin-bottom:18px;min-height:0;background:linear-gradient(135deg,#963c70,#b85c8e 70%,#d994b8)}
+.hero>*{display:block;min-width:0;max-width:100%;width:auto}
+.hero .eyebrow{font-size:10px;letter-spacing:.10em;line-height:1.5;overflow-wrap:anywhere}
+.hero h2{font-size:25px;line-height:1.2;margin:9px 0;overflow-wrap:break-word;max-width:100%}
+.hero p{font-size:13px;line-height:1.55;max-width:100%;margin:10px 0 0;overflow-wrap:break-word}
+.hero>span.hide-mobile{display:none!important}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:12px 0 18px}
+.stat{padding:16px 14px;border-radius:17px;min-width:0;overflow:hidden}
+.stat b{font-size:27px;overflow-wrap:anywhere}
+.stat .meta,.stat .muted{line-height:1.35;overflow-wrap:anywhere;font-size:11px}
+.card{width:100%;min-width:0;padding:17px 15px;border-radius:18px;margin-bottom:13px;overflow:hidden}
+.card h2{font-size:19px;line-height:1.27;overflow-wrap:break-word}
+.card h3{font-size:16px}
+.split{display:grid;grid-template-columns:minmax(0,1fr);gap:0}
+.row{min-width:0}
+.form-grid{grid-template-columns:minmax(0,1fr)}
+input,textarea,select{max-width:100%;min-width:0}
+.field input,.field select,.field textarea{font-size:16px;max-width:100%}
+.scroll{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+.scroll table{min-width:560px}
+.notice{font-size:12px;padding:12px 14px;line-height:1.45;border-radius:13px;overflow-wrap:anywhere}
+.notice p{margin:5px 0 0}
+.btn{min-height:40px;max-width:100%;white-space:normal}
+.mobile-bottom-nav{position:fixed;z-index:65;bottom:0;left:0;right:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));height:calc(69px + env(safe-area-inset-bottom,0px));padding:7px 5px calc(6px + env(safe-area-inset-bottom,0px));background:#fff;border-top:1px solid #eadde6;box-shadow:0 -5px 24px #3b183015}
+.mobile-bottom-item{border:0;background:transparent;color:#897b8b;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:10px;font-weight:700;border-radius:12px;min-width:0;padding:4px 0}
+.mobile-bottom-item span:last-child{display:block;width:100%;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mobile-bottom-item.active{color:#a24077;background:#fbf0f6}
+.mobile-bottom-icon{font-size:22px;line-height:1.1}
+.mobile-nav-sheet{position:fixed;z-index:90;left:0;right:0;bottom:calc(69px + env(safe-area-inset-bottom,0px));max-height:70dvh;overflow-y:auto;background:#fff;border-radius:23px 23px 0 0;box-shadow:0 -20px 70px #23112850;padding:20px 16px 22px;display:block}
+.mobile-nav-sheet[hidden]{display:none!important}
+.mobile-sheet-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.mobile-sheet-head b{font-size:19px;font-family:Outfit,sans-serif}
+.mobile-sheet-head button{border:0;background:#f5edf2;border-radius:50%;width:34px;height:34px;color:#5d3b53}
+.mobile-sheet-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.mobile-sheet-link{border:1px solid #eadce5;background:#fcf8fb;color:#4c3546;min-height:52px;padding:11px 9px;border-radius:13px;display:flex;align-items:center;gap:9px;text-align:left;font-size:12px;font-weight:700;min-width:0}
+.mobile-sheet-link span{font-size:19px;color:#b65889}
+.footer-note{padding:0 3px;margin-top:22px;font-size:10px;text-align:center}
+.login-form{padding:22px 18px}
+.login-screen{min-height:100dvh}
+.report{max-width:100%;padding:16px}
+}
+@media(max-width:365px){.top-actions #logout{order:4}.cards{gap:8px}.stat{padding:12px 10px}.stat b{font-size:24px}.mobile-brand strong{font-size:14px}}
