@@ -74,3 +74,113 @@ input,textarea,select{max-width:100%;min-width:0}
 .report{max-width:100%;padding:16px}
 }
 @media(max-width:365px){.top-actions #logout{order:4}.cards{gap:8px}.stat{padding:12px 10px}.stat b{font-size:24px}.mobile-brand strong{font-size:14px}}
+
+
+/* 2026 academy visual design system — preserve existing app workflows */
+:root{--academy-ink:#251a31;--academy-purple:#493050;--academy-rose:#b65889;--academy-soft:#fbf6f9;--academy-line:#efe5ed;--academy-shadow:0 16px 44px rgba(65,30,62,.07);background:#f8f6fa;color:var(--academy-ink)}
+body{background:radial-gradient(circle at 90% 0%,#f7eaf2 0,transparent 35%),#f8f6fa}
+h1,h2,h3{font-family:'Outfit',sans-serif}
+.shell aside{background:linear-gradient(170deg,#281c36 0%,#3e2745 58%,#271d35 100%);box-shadow:8px 0 35px #24152a12}
+.shell aside .brand{padding:8px 8px 26px;margin-bottom:22px}
+.shell aside .nav-btn{min-height:43px;border-radius:13px;transition:background .2s,transform .2s;margin:3px 0}
+.shell aside .nav-btn:hover{transform:translateX(3px);background:#ffffff15}
+.shell aside .nav-btn.active{background:linear-gradient(90deg,#b658894a,#b6588915);box-shadow:inset 3px 0 #e8a5c8}
+main{padding-top:28px}
+.topbar{background:#ffffffb8;backdrop-filter:blur(16px);padding:20px 24px;border:1px solid #efe5ed;border-radius:22px;margin-bottom:24px;box-shadow:var(--academy-shadow)}
+.topbar h1{font-size:30px;font-weight:800}
+.page-sub{color:#8b7c8d}
+.card,.stat{border:1px solid #f0e6ee;box-shadow:var(--academy-shadow);border-radius:22px;transition:box-shadow .2s,transform .2s}
+.stat{position:relative;overflow:hidden;min-height:150px;padding:24px}
+.stat:before{content:"";position:absolute;width:115px;height:115px;border-radius:50%;background:#b658890c;right:-36px;top:-48px}
+.stat:hover,.link-tile:hover{transform:translateY(-2px);box-shadow:0 20px 42px #492a4716}
+.stat b{font-size:34px;color:#34223d}
+.stat .icon{float:none;position:absolute;right:18px;top:18px;background:#f9e8f2;color:#9c4b7a}
+.stat .muted{padding-right:52px}
+.card{padding:25px}
+.card h2{font-weight:800;color:#35223c}
+.hero{min-height:195px;border-radius:25px;padding:32px 36px;background:linear-gradient(110deg,#40243d 0%,#7d3d69 54%,#c76b9e 100%);box-shadow:0 18px 40px #7b3d6b2e;isolation:isolate}
+.hero:before{content:"";position:absolute;width:280px;height:280px;border-radius:50%;right:-80px;top:-110px;border:48px solid #ffffff13;z-index:-1}
+.hero:after{content:"";position:absolute;width:210px;height:210px;border-radius:50%;right:95px;bottom:-155px;background:#ffffff0d;z-index:-1}
+.hero h2{font-size:34px;line-height:1.13;letter-spacing:-.035em}
+.hero p{font-size:14px;line-height:1.7}
+.btn{border-radius:12px;min-height:42px;transition:transform .18s,box-shadow .18s,background .18s;box-shadow:0 5px 12px #b6588917}
+.btn:hover{transform:translateY(-1px);box-shadow:0 8px 20px #b6588933}
+.btn.secondary{box-shadow:none}
+.field input,.field select,.field textarea{border-radius:12px;min-height:45px;background:#fff}
+.field input:focus,.field select:focus,.field textarea:focus{box-shadow:0 0 0 4px #b6588921}
+.scroll{border:1px solid #f2e9ef;border-radius:15px}
+.scroll table th{background:#fbf7fa;color:#766575;font-weight:800}
+.scroll table tr:last-child td{border-bottom:0}
+.link-tile{border-radius:16px;padding:19px;transition:transform .2s,box-shadow .2s}
+.avatar{background:linear-gradient(145deg,#f6deed,#e7b6d0);border:2px solid #fff;box-shadow:0 3px 12px #b6588925}
+.login-screen{background:#faf8fb;min-height:100dvh}
+.login-art{position:relative;overflow:hidden;background:radial-gradient(circle at 82% 18%,#b65d91 0,transparent 32%),linear-gradient(155deg,#25172f,#5c2f57 60%,#914b78)}
+.login-art:before{content:"";position:absolute;right:-150px;top:-140px;width:500px;height:500px;border:70px solid #ffffff0d;border-radius:50%}
+.login-art:after{content:"";position:absolute;left:-110px;bottom:-220px;width:460px;height:460px;background:#ffffff09;border-radius:50%}
+.login-art>div{position:relative;z-index:1}
+.login-art h1{font-size:clamp(46px,5vw,70px);line-height:1.04;max-width:590px}
+.login-art p{font-size:16px;max-width:480px;line-height:1.8}
+.login-form{background:radial-gradient(circle at 80% 12%,#f4e5f0,transparent 48%),#faf8fb}
+.login-panel{max-width:440px;padding:34px 30px;background:#fff;border:1px solid #efe5ed;border-radius:28px;box-shadow:0 28px 80px #39253b10}
+.login-panel h2{font-size:34px}
+.login-panel .btn{min-height:48px}
+.login-panel .field label{font-size:13px}
+.academy-splash{position:fixed;inset:0;z-index:99999;background:radial-gradient(circle at 55% 45%,#764467 0%,#422b4b 46%,#211a2e 100%);color:white;display:grid;place-items:center;overflow:hidden;transition:opacity .55s ease,visibility .55s ease}
+.academy-splash.splash-exit{opacity:0;visibility:hidden;pointer-events:none}
+.splash-orbit{position:absolute;border-radius:50%;border:1px solid #ffffff20;animation:splashSpin 14s linear infinite}
+.splash-orbit-one{width:530px;height:530px}
+.splash-orbit-two{width:740px;height:740px;border-style:dashed;animation-direction:reverse}
+.splash-content{z-index:1;text-align:center;padding:25px;animation:splashRise .8s ease both}
+.splash-crest{height:118px;width:118px;border-radius:32px;background:white;display:grid;place-items:center;margin:0 auto 26px;padding:14px;box-shadow:0 20px 60px #120a223d}
+.splash-crest img{width:100%;height:100%;object-fit:contain}
+.splash-school{font:800 clamp(29px,5vw,43px) Outfit,sans-serif;letter-spacing:.03em}
+.splash-academy{font-size:15px;font-weight:800;letter-spacing:.4em;margin:7px 0 12px;color:#f0d3e5}
+.splash-motto{font-size:11px;letter-spacing:.32em;color:#e3aacb;font-weight:800}
+.splash-progress{width:180px;height:4px;background:#ffffff30;border-radius:99px;overflow:hidden;margin:44px auto 14px}
+.splash-progress span{display:block;width:40%;height:100%;background:#f3b8d7;border-radius:99px;animation:splashLoad 1.25s ease-in-out infinite}
+.splash-caption{font-size:12px;color:#f2dce9}
+@keyframes splashSpin{to{transform:rotate(360deg)}}
+@keyframes splashRise{from{opacity:0;transform:translateY(20px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes splashLoad{0%{transform:translateX(-110%)}100%{transform:translateX(350%)}}
+@media(max-width:760px){
+body{background:#f8f5f9}
+.mobile-app-header{background:#fffefef5;backdrop-filter:blur(18px);border-bottom:1px solid #eee2eb;box-shadow:0 7px 22px #35213909}
+.mobile-brand img{border-radius:12px;background:#fff;box-shadow:0 2px 8px #301a3414}
+.mobile-menu-button{background:#f7e9f1;color:#753b62;border-radius:13px}
+main{padding:14px 13px 112px}
+.topbar{padding:15px 16px;border-radius:19px;display:flex;align-items:flex-start;flex-direction:column;gap:12px;margin-bottom:16px}
+.topbar h1{font-size:25px}
+.top-actions{width:100%;display:flex;flex-wrap:wrap;gap:7px}
+.top-actions .avatar{display:none}
+.top-actions .btn{flex:1 1 auto;font-size:11px;min-height:38px;padding:8px 10px}
+.top-actions select{flex:1 1 110px;min-width:0!important;font-size:12px}
+.hero{display:block!important;min-height:172px;padding:25px 23px;border-radius:22px}
+.hero h2{font-size:27px}
+.hero p{font-size:13px}
+.cards{gap:10px}
+.stat{padding:17px;min-height:128px;border-radius:18px}
+.stat b{font-size:27px}
+.stat .icon{display:grid;right:12px;top:12px;width:33px;height:33px;font-size:17px}
+.stat .muted{padding-right:24px;font-size:11px}
+.card{border-radius:18px;padding:18px}
+.mobile-bottom-nav{background:#fffefa;border-top:1px solid #f0e5ed;box-shadow:0 -10px 35px #24152a0d}
+.mobile-bottom-item.active{color:#a94b7c}
+.mobile-bottom-item.active .mobile-bottom-icon{background:#f7e3ef;border-radius:13px}
+.login-screen{display:block}
+.login-art{display:flex!important;min-height:220px;padding:26px 24px 35px}
+.login-art h1{font-size:29px;max-width:420px}
+.login-art p{font-size:12px;margin:7px 0}
+.login-art .eyebrow{margin:12px 0 7px!important;font-size:9px}
+.login-art .brand{margin:0;padding:0}
+.login-art .academy-logo{height:51px;width:51px}
+.login-art .brand-name{font-size:15px}
+.login-art .brand-name small{font-size:8px}
+.login-art div[style*="font-size:70px"]{display:none}
+.login-form{min-height:auto;padding:0 14px 36px;display:block;margin-top:-18px;position:relative;z-index:2;background:transparent}
+.login-panel{max-width:100%;border-radius:24px;padding:25px 22px;box-shadow:0 14px 40px #35203917}
+.login-panel h2{font-size:27px}
+.splash-orbit-one{width:360px;height:360px}
+.splash-orbit-two{width:520px;height:520px}
+.splash-crest{width:96px;height:96px;border-radius:26px}
+}
+@media(prefers-reduced-motion:reduce){.splash-orbit,.splash-progress span,.splash-content{animation:none!important}*{scroll-behavior:auto!important}}
