@@ -55,8 +55,8 @@ export async function showFeature(section,ctx){
  const canWrite=role==='admin'||(c.teacher&&role==='teacher')||(section==='Messages'&&['teacher','parent'].includes(role));
  if(canWrite){
   let extra='';
-  if(['Homework','Lesson Plans','Digital Library'].includes(section))extra='<div class="field"><label>Class ID</label><input name="class_id" required placeholder="Select a class from Classes & Subjects"></div><div class="field"><label>Subject ID</label><input name="subject_id" required placeholder="Select an assigned subject"></div>';
-  if(section==='School Fees')extra='<div class="field"><label>Student profile ID</label><input name="student_id" required></div>';
+  if(['Homework','Lesson Plans','Digital Library'].includes(section)){const [cl,sub,alloc]=await Promise.all([db.from('classes').select('id,name').order('name'),db.from('subjects').select('id,name').order('name'),db.from('teacher_assignments').select('class_id,subject_id').eq('teacher_id',user.id)]);const allowed=role==='admin'?null:alloc.data||[];const cls=(cl.data||[]).filter(v=>!allowed||allowed.some(a=>a.class_id===v.id));const subs=(sub.data||[]).filter(v=>!allowed||allowed.some(a=>a.subject_id===v.id));extra='<div class="field"><label>Class</label><select name="class_id" required>'+cls.map(v=>'<option value="'+x(v.id)+'">'+x(v.name)+'</option>').join('')+'</select></div><div class="field"><label>Subject</label><select name="subject_id" required>'+subs.map(v=>'<option value="'+x(v.id)+'">'+x(v.name)+'</option>').join('')+'</select></div>';}
+  if(section==='School Fees'){const students=await db.from('profiles').select('id,full_name').eq('role','student').order('full_name');extra='<div class="field"><label>Student</label><select name="student_id" required>'+((students.data||[]).map(v=>'<option value="'+x(v.id)+'">'+x(v.full_name)+'</option>').join(''))+'</select></div>';}
   html+='<div class="card"><h2>Create '+x(section)+' record</h2>'+form(c,extra)+'</div>';
  }
  setPage(html);
